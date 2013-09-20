@@ -62,6 +62,7 @@ namespace SubtitleFixer
             {
                 //get series and episode 
                 var regex = new Regex(@"(s\d\d?e\d\d?)",RegexOptions.IgnoreCase);
+
                 //as the episode can be either S01E01 or s01e01, we'll work with lowercase variant from now on
                 string result = regex.Match(video).ToString().ToLower();
                 Console.WriteLine("Going to work with: " + result);
@@ -78,7 +79,7 @@ namespace SubtitleFixer
                 }
                 else
                 {
-                    Console.WriteLine("No subtitle file found, skipping.");
+                    Console.WriteLine("No subtitle file found, skipping...");
                 }    
             }
         }
